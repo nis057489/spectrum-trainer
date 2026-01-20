@@ -1,0 +1,10 @@
+{
+  "id": "starter_satcom_ku",
+  "name": "Starter: SATCOM Ku-band bandwidth tradeoffs",
+  "bandId": "sat_ku_dl",
+  "description": "Goal: Fit two wide links without overlap. Experiment with bandwidth and spacing. (Training example band.)",
+  "nets": [
+    { "name": "Link 1", "profileName": "SATCOM (250 MHz)", "pTxdBm": 15, "fcHz": 11200000000, "spacingHz": 1000000 },
+    { "name": "Link 2", "profileName": "SATCOM (250 MHz)", "pTxdBm": 15, "fcHz": 11300000000, "spacingHz": 1000000 }
+  ]
+}

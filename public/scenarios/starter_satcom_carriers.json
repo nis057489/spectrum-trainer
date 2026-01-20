@@ -1,0 +1,13 @@
+{
+  "id": "starter_satcom_carriers",
+  "name": "Starter: SATCOM carrier allocation (Ku downlink)",
+  "bandId": "sat_ku_dl",
+  "description": "Goal: Fit 3 wide carriers and 2 narrow carriers into the band without overlap, using appropriate channel spacing. This is an illustrative exercise only.",
+  "nets": [
+    { "name": "Carrier A", "profileName": "SATCOM (250 MHz)", "pTxdBm": 10 },
+    { "name": "Carrier B", "profileName": "SATCOM (250 MHz)", "pTxdBm": 10 },
+    { "name": "Carrier C", "profileName": "SATCOM (250 MHz)", "pTxdBm": 10 },
+    { "name": "Telemetry", "profileName": "Wideband Data", "pTxdBm": 0 },
+    { "name": "Beacon", "profileName": "Narrowband Data", "pTxdBm": 0 }
+  ]
+}

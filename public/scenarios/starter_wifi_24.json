@@ -1,0 +1,11 @@
+{
+  "id": "starter_wifi_24",
+  "name": "Starter: Wi-Fi 2.4 GHz channel planning",
+  "bandId": "wifi_24",
+  "description": "Goal: Choose center freqs and channel widths for three APs so they coexist. Try 20 MHz first, then see what happens with 40 MHz.",
+  "nets": [
+    { "name": "AP Alpha", "profileName": "Wi-Fi (20 MHz)", "pTxdBm": 20, "fcHz": 2412000000, "spacingHz": 5000000 },
+    { "name": "AP Bravo", "profileName": "Wi-Fi (20 MHz)", "pTxdBm": 20, "fcHz": 2437000000, "spacingHz": 5000000 },
+    { "name": "AP Charlie", "profileName": "Wi-Fi (20 MHz)", "pTxdBm": 20, "fcHz": 2462000000, "spacingHz": 5000000 }
+  ]
+}

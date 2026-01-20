@@ -1,0 +1,12 @@
+{
+  "id": "starter_wifi_channel_plan",
+  "name": "Starter: Wi-Fi channel planning (2.4 GHz)",
+  "bandId": "wifi_24",
+  "description": "Goal: Place 4 APs using 20 MHz channels with minimal overlap. Hint: channel spacing is typically a fixed grid; try separation so rectangles do not overlap.",
+  "nets": [
+    { "name": "AP Alpha", "profileName": "Wi-Fi (20 MHz)", "pTxdBm": 20 },
+    { "name": "AP Bravo", "profileName": "Wi-Fi (20 MHz)", "pTxdBm": 20 },
+    { "name": "AP Charlie", "profileName": "Wi-Fi (20 MHz)", "pTxdBm": 20 },
+    { "name": "AP Delta", "profileName": "Wi-Fi (20 MHz)", "pTxdBm": 20 }
+  ]
+}

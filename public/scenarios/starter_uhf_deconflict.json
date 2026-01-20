@@ -1,0 +1,14 @@
+{
+  "id": "starter_uhf_deconflict",
+  "name": "Starter: Deconflict 6 nets (UHF)",
+  "bandId": "uhf_225_400",
+  "description": "Goal: Move the nets so none overlap, and keep each on its channel grid. Bonus: improve estimated SINR for all nets. Use center frequency, bandwidth, power, and channel spacing.",
+  "nets": [
+    { "name": "Cmd Voice",  "profileName": "Narrowband Voice", "pTxdBm": 33, "fcHz": 300000000 },
+    { "name": "Log Voice",  "profileName": "Narrowband Voice", "pTxdBm": 33, "fcHz": 300010000 },
+    { "name": "Air Voice",  "profileName": "Narrowband Voice", "pTxdBm": 33, "fcHz": 300020000 },
+    { "name": "Data A",     "profileName": "Narrowband Data",  "pTxdBm": 30, "fcHz": 300030000 },
+    { "name": "Data B",     "profileName": "Narrowband Data",  "pTxdBm": 30, "fcHz": 300040000 },
+    { "name": "Wide Link",  "profileName": "Wideband Data",    "pTxdBm": 27, "fcHz": 300050000 }
+  ]
+}
