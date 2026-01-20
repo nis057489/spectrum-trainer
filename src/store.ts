@@ -128,8 +128,24 @@ export const useApp = create<AppState>((set, get) => {
     select: (id) => set({ selectedId: id }),
 
     loadScenarioFromUrl: async (url) => {
-      const res = await fetch(url);
-      if (!res.ok) throw new Error(`Failed to load scenario: ${res.status}`);
+      // Try the provided URL and a few fallbacks (with/without leading slash) so
+      // this works consistently in dev and deployed environments.
+      const tryUrls = [url, url.startsWith('/') ? url.slice(1) : `/${url}`];
+      let res: Response | null = null;
+      for (const u of tryUrls) {
+        try {
+          // eslint-disable-next-line no-await-in-loop
+          const r = await fetch(u);
+          if (r.ok) {
+            res = r;
+            break;
+          }
+        } catch (e) {
+          // ignore and try next url
+        }
+      }
+      if (!res || !res.ok) throw new Error(`Failed to load scenario: ${url}`);
+
       const scenario = (await res.json()) as Scenario;
       const band = get().bands.find((b) => b.id === scenario.bandId) ?? get().band;
       const txs = buildTxsFromScenario(scenario, get().profiles, uid).map((t, i) => {

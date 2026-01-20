@@ -54,8 +54,14 @@ export default function App() {
                 onChange={(e) => {
                   const id = e.target.value;
                   setScenarioId(id);
-                  void loadScenarioFromUrl(`/scenarios/${id}.json`).catch(() => {
-                    // ignore
+                  void loadScenarioFromUrl(`scenarios/${id}.json`).catch((err) => {
+                    // Log the error so the developer knows why nothing changed.
+                    // Also show a simple alert for now to make the failure visible in UI.
+                    // Failures can happen if the scenario file is missing or path differs.
+                    // eslint-disable-next-line no-console
+                    console.error('Failed to load scenario', err);
+                    // eslint-disable-next-line no-alert
+                    alert(`Failed to load scenario: ${id}`);
                   });
                 }}
               >
