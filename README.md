@@ -7,6 +7,10 @@ This is a small interactive webapp for teaching spectrum planning basics:
 - simple overlap/adjacent conflict detection
 - a deliberately simplified SINR estimate
 
+## Access
+
+[https://nis057489.github.io/spectrum-trainer/](https://nis057489.github.io/spectrum-trainer/)
+
 ## Run locally
 
 1) Install Node.js 18+.
