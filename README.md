@@ -24,3 +24,9 @@ Open the URL shown in the terminal (typically http://localhost:5173).
 
 ## Scenarios
 Scenarios live in `public/scenarios/` as JSON. You can add your own by copying an existing file.
+
+## Deploying to GitHub Pages
+A GitHub Actions workflow is included at `.github/workflows/ghpages.yml` which builds the app and publishes `dist/` to GitHub Pages.
+
+- Build & deploy locally: `npm run predeploy && npm run deploy` (requires `gh-pages` dev dependency).
+- The action will also copy `dist/index.html` to `dist/404.html` so SPA routing has a fallback.
